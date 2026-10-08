@@ -1,49 +1,81 @@
-ji<!DOCTYPE html><html lang="en">
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Real-Time Communication App</title>
+  <title>CodeAlpha Real-Time Communication App</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main class="container">
     <h1>Real-Time Communication</h1>
-    <p class="subtitle">CodeAlpha Task 4</p><section class="panel">
-  <label for="room">Meeting Room ID</label>
-  <input id="room" type="text" placeholder="Enter room name">
-  <button id="joinBtn">Join Room</button>
-  <p id="status">Not connected to a room</p>
-</section> 
-<section class="video-grid">
-  <div>
-    <h2>Your Camera</h2>
-    <video id="localVideo" autoplay muted playsinline></video>
-  </div>
-  <div>
-    <h2>Remote Participant</h2>
-    <video id="remoteVideo" autoplay playsinline></video>
-  </div>
-</section>
+    <p>CodeAlpha Task 4</p>
 
-<section class="controls">
-  <button id="cameraBtn">Start Camera</button>
-  <button id="shareBtn">Share Screen</button>
-</section>
+    <section class="panel">
+      <h2>Meeting Room</h2>
+      <input id="username" type="text" placeholder="Enter your name">
+      <input id="room" type="text" placeholder="Enter Meeting Room ID">
+      <button id="joinBtn">Join Room</button>
+      <p id="status">Not connected to a room</p>
+      <p id="participants">Participants: 0</p>
+    </section>
 
-<section class="panel">
-  <h2>Room Chat</h2>
-  <div id="messages" class="messages"></div>
-  <div class="chat-row">
-    <input id="messageInput" type="text" placeholder="Write a message">
-    <button id="sendBtn">Send</button>
-  </div>
-</section>
+    <section class="video-grid">
+      <div>
+        <h2>Your Camera</h2>
+        <video id="localVideo" autoplay muted playsinline></video>
+      </div>
+      <div>
+        <h2>Remote Participant</h2>
+        <video id="remoteVideo" autoplay playsinline></video>
+      </div>
+    </section>
 
-<p class="note">Use a unique room name to meet other participants.</p>
-</main>
-<script src="/socket.io/socket.io.js"></script>
-<script src="script.js"></script>
+    <section class="controls">
+      <button id="cameraBtn">Start Camera</button>
+      <button id="micBtn">Mute Microphone</button>
+      <button id="shareBtn">Share Screen</button>
+      <button id="leaveBtn">Leave Room</button>
+    </section>
 
-  </body>
+    <section class="panel">
+      <h2>Room Chat</h2>
+      <div id="messages" class="messages"></div>
+      <div class="chat-row">
+        <input id="messageInput" type="text" placeholder="Type your message">
+        <button id="sendBtn">Send</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>File Sharing</h2>
+      <input id="fileInput" type="file">
+      <button id="uploadBtn">Share File</button>
+      <div id="fileList"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Collaborative Whiteboard</h2>
+      <canvas id="whiteboard" width="700" height="350"></canvas>
+      <button id="clearBoardBtn">Clear Whiteboard</button>
+    </section>
+
+    <section class="panel">
+      <h2>Account</h2>
+      <input id="authUsername" type="text" placeholder="Username">
+      <input id="authPassword" type="password" placeholder="Password">
+      <button id="registerBtn">Register</button>
+      <button id="loginBtn">Login</button>
+      <p id="authStatus"></p>
+    </section>
+
+    <p class="note">
+      Use the same Meeting Room ID to connect with another participant.
+    </p>
+  </main>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
 </html>
-  
