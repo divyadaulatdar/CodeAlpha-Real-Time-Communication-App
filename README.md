@@ -2,21 +2,22 @@ CodeAlpha Task 4 - Real-Time Communication App
 
 Project Overview
 
-This project is a real-time communication application designed to help users communicate and collaborate online.
+A real-time communication web application built using HTML, CSS, JavaScript, Node.js, Express.js, Socket.IO, and WebRTC.
 
-Features
+Current Features
 
-- Real-time communication
-- Video and audio calling (WebRTC implementation planned)
-- Screen sharing (planned)
-- File sharing (planned)
-- Collaborative whiteboard (planned)
-- User authentication and security (planned)
+- Meeting room interface
+- Room joining through Socket.IO
+- Camera and microphone access
+- Chat interface
+- Screen-sharing interface
+- Whiteboard drawing interface
+- Basic WebRTC signaling code
 
 Technologies Used
 
-- HTML
-- CSS
+- HTML5
+- CSS3
 - JavaScript
 - Node.js
 - Express.js
@@ -25,18 +26,25 @@ Technologies Used
 
 Project Structure
 
-- "public/" - Frontend files
-- "server.js" - Server application
-- "package.json" - Project dependencies
-- "README.md" - Project documentation
+- "public/index.html" - User interface
+- "public/style.css" - Page styling
+- "public/script.js" - Client-side functionality
+- "server.js" - Node.js and Socket.IO server
+- "package.json" - Project dependencies and start command
 
 How to Run
 
 1. Install Node.js.
-2. Install project dependencies using "npm install".
-3. Start the server using "npm start".
-4. Open "http://localhost:3000" in your browser.
+2. Download or clone this repository.
+3. Open a terminal in the project folder.
+4. Run "npm install".
+5. Run "npm start".
+6. Open "http://localhost:3000" in your browser.
 
-Note
+Important Notes
 
-This README describes the project plan. Features marked as planned must be implemented and tested before the application is considered complete.
+This project is under development. Video calling between participants, account registration and login, server-side file sharing, and synchronized whiteboard functionality require further implementation and testing.
+
+Author
+
+Divya Daulatdar
